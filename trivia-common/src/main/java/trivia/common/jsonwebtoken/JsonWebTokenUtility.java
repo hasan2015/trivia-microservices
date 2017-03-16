@@ -23,6 +23,9 @@ public class JsonWebTokenUtility {
 		// For simplicity, we are storing a static key here.
 		// Ideally, in a microservices environment, this key would kept on a
 		// config server.
+		// 这里不是真正安全的实践
+		// 为了简单，我们存储一个静态key在这里，
+		// 在真正微服务环境，这个key将会被保留在配置服务器
 		signatureAlgorithm = SignatureAlgorithm.HS512;
 		String encodedKey = "L7A/6zARSkK1j7Vd5SDD9pSSqZlqF7mAhiOgRbgv9Smce6tf4cJnvKOjtKPxNNnWQj+2lQEScm3XIUjhW+YVZg==";
 		secretKey = deserializeKey(encodedKey);
